@@ -1,0 +1,39 @@
+strong{
+	color: #FFD093;
+	text-shadow: #3E2400 0 0 1rem;
+}
+
+img{
+	border: none !important;
+	background: none !important;
+}
+
+.large{
+	width: 50%;
+	height: auto;
+}
+.full-width{
+	width: 100vw;
+	height: auto;
+}
+.full-height{
+	height: calc(60vh + 100px);
+	width: auto;
+}
+
+
+ico{
+	font-size: 4rem;
+	vertical-align: middle;
+}
+
+pre{
+	font-size: 1.3rem !important;
+}
+
+.fragment.switch{
+	display: none;
+}
+.fragment.switch.current-fragment{
+	display: block;
+}
