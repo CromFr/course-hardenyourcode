@@ -90,7 +90,7 @@ _but we like it_
 ![](res/totoro.gif)<!-- .element: class="full-height" style="transform: scaleX(-1);" -->
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#003367" -->
+<!-- .slide: data-background="#421c0d" -->
 
 # __Unittests__
 
@@ -250,7 +250,7 @@ Note:
 - Library functions should not be unittested
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#003367" -->
+<!-- .slide: data-background="#421c0d" -->
 # __Coverage__ analysis
 
 
@@ -330,7 +330,7 @@ Conclusion: <span class="fragment">Test strings with `T` and `I`</span>
 Note: `| Exec count | Line No | Code |`
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#003367" -->
+<!-- .slide: data-background="#421c0d" -->
 # __Contract__ programming
 
 
@@ -404,7 +404,7 @@ class GpsCoord{
 ```
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#003367" -->
+<!-- .slide: data-background="#421c0d" -->
 # __C__ontinuous __I__ntegration
 
 
@@ -476,7 +476,7 @@ Coverage Analysis
 ![](res/ciexample.png)<!-- .element: class="full-width" -->
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#003367" -->
+<!-- .slide: data-background="#421c0d" -->
 
 # Bonus stage
 ![](res/extra.png)<!-- .element: class="raw full-height" -->
@@ -507,7 +507,7 @@ Coverage Analysis
 - ...
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#003367" -->
+<!-- .slide: data-background="#421c0d" -->
 
 # (?)
 ![](res/questions.jpg)<!-- .element: class="full-height" -->
