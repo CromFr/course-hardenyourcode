@@ -3,9 +3,10 @@ strong{
 	text-shadow: #3E2400 0 0 1rem;
 }
 
-img{
+img.raw{
 	border: none !important;
 	background: none !important;
+	box-shadow: none !important;
 }
 
 .large{

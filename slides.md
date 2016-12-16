@@ -1,16 +1,17 @@
 
 # __Harden__
-![](res/intro.svg)<!-- .element: style="height: 40%; width: auto; opacity: 0.7;" -->
+![](res/intro.svg)<!-- .element: class="raw" style="height: 40%; width: auto; opacity: 0.7;" -->
 # your `<code/>`
 
 
-## __High level__ concepts
+## Disclaimer
 
+- __High level__ concepts
 - Can be applied to:
-    + Any language
-    + Any target (native app, web, embedded...)
+    + __Any language__
+    + __Any target__ (native app, web, embedded...)
 
-- Always good <ico>😉</ico>
+- Always __good__ <ico>😉</ico>
 
 
 ## __Q__uality __A__ssurance
@@ -23,7 +24,7 @@
 
 
 ### A bugfix introducing a new bug
-![](res/bugsagain.gif)<!-- .element: class="full-height" -->
+![](res/bugsagain.gif)<!-- .element: class="raw full-height" -->
 
 
 ### Unexpected side effects
@@ -86,7 +87,7 @@ _but we like it_
 
 
 ## Time to move forward !
-![](res/forward.gif)<!-- .element: class="full-height" -->
+![](res/totoro.gif)<!-- .element: class="full-height" style="transform: scaleX(-1);" -->
 
 ------------------------------------------------------------
 <!-- .slide: data-background="#003367" -->
@@ -367,9 +368,9 @@ Coverage Analysis
 
 ### `github.com/CromFr/nwn-lib-d`
 
-[![Build Status](https://travis-ci.org/CromFr/nwn-lib-d.svg?branch=master)<!-- .element: style="width: 30%" -->](https://travis-ci.org/CromFr/nwn-lib-d)
+[![Build Status](https://travis-ci.org/CromFr/nwn-lib-d.svg?branch=master)<!-- .element: class="raw" style="width: 30%" -->](https://travis-ci.org/CromFr/nwn-lib-d)
 
-[![codecov](https://codecov.io/gh/CromFr/nwn-lib-d/branch/master/graph/badge.svg)<!-- .element: style="width: 30%" -->](https://codecov.io/gh/CromFr/nwn-lib-d)
+[![codecov](https://codecov.io/gh/CromFr/nwn-lib-d/branch/master/graph/badge.svg)<!-- .element: class="raw" style="width: 30%" -->](https://codecov.io/gh/CromFr/nwn-lib-d)
 
 
 ## Open source usage
@@ -387,7 +388,7 @@ Coverage Analysis
 <!-- .slide: data-background="#003367" -->
 
 # Bonus stage
-![](res/extra.png)<!-- .element: class="full-height" -->
+![](res/extra.png)<!-- .element: class="raw full-height" -->
 
 
 #### `less_code && less_copy_paste == better_code`
