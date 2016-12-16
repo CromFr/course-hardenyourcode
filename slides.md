@@ -89,6 +89,13 @@ _but we like it_
 ## Time to move forward !
 ![](res/totoro.gif)<!-- .element: class="full-height" style="transform: scaleX(-1);" -->
 
+
+
+
+
+
+
+
 ------------------------------------------------------------
 <!-- .slide: data-background="#421c0d" -->
 
@@ -249,6 +256,14 @@ Note:
 - You'll learn efficient unittesting with time
 - Library functions should not be unittested
 
+
+
+
+
+
+
+
+
 ------------------------------------------------------------
 <!-- .slide: data-background="#421c0d" -->
 # __Coverage__ analysis
@@ -329,6 +344,14 @@ Conclusion: <span class="fragment">Test strings with `T` and `I`</span>
 
 Note: `| Exec count | Line No | Code |`
 
+
+
+
+
+
+
+
+
 ------------------------------------------------------------
 <!-- .slide: data-background="#421c0d" -->
 # __Contract__ programming
@@ -402,6 +425,14 @@ class GpsCoord{
     }
 };
 ```
+
+
+
+
+
+
+
+
 
 ------------------------------------------------------------
 <!-- .slide: data-background="#421c0d" -->
@@ -505,6 +536,14 @@ Coverage Analysis
 - clang-format
 - dfmt
 - ...
+
+
+
+
+
+
+
+
 
 ------------------------------------------------------------
 <!-- .slide: data-background="#421c0d" -->
