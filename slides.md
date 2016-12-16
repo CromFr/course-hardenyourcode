@@ -8,15 +8,17 @@
 
 - __High level__ concepts
 - Can be applied to:
-    + __Any language__
-    + __Any target__ (native app, web, embedded...)
+  + __Any language__
+  + __Any target__ (native app, web, embedded...)
 
 - Always __good__ <ico>😉</ico>
+
+Note: I'll give key words
 
 
 ## __Q__uality __A__ssurance
 
-- Some people are payed to do only this
+- Some people are paid to do only this
 - Worst job ever?
 
 
@@ -513,24 +515,37 @@ Coverage Analysis
 ![](res/extra.png)<!-- .element: class="raw full-height" -->
 
 
-#### `less_code && less_copy_paste == better_code`
+## Handling inter-dependencies
+
+- Mock / Stub functions / class
+  + __Stub__ = to be able to build tests
+  + __Mock__ = to run & do test assertions
 
 
-## The compiler is your friend
+## Exception vs Assertion
+
+- Exceptions are for:
+  + Errors that are created by the user
+  + Examples:
+    * Access denied
+    * Malformed XML
+- Assertions
+  + A debugging tool
+  + If it happens, it's the developer's fault
+  + Examples:
+    * Division by 0
+    * Pointer exceptions
 
 
-## Assertion vs Exception
+## The compiler is your best friend
 
 
-## Mock objects / Stub
-
-- Email sender example
-
-- Mock = fake object for assert purposes
-- Stub = fake object to be able to run tests
+### `less_code && less_duplications`
+### `==`
+### `better_code`
 
 
-## Code formatting
+## Peer working<br/>=> Code formatting
 
 - gofmt
 - clang-format
