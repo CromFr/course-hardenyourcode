@@ -347,8 +347,10 @@ Conclusion: <span class="fragment">Test strings with `T` and `I`</span>
 Note: `| Exec count | Line No | Code |`
 
 
+## Advice
 
-
+Dont fake your ratio by calling functions without checks
+![](res/enlarge.gif)<!-- .element: class="full-height" -->
 
 
 
