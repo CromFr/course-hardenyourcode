@@ -110,13 +110,13 @@ int main(){
 - This work shouldn't be wasted
 
 
-## The ugly <ico>😢</ico>
+## The ugly <ico>😡</ico>
 
 - Write test cases on paper/word/...
 - Start writing unittests after writing code
 
 
-## The bad <ico>😡</ico>
+## The bad <ico>😢</ico>
 
 - Think that unittests will slow you down
 - Test some functions with typical values
@@ -124,9 +124,71 @@ int main(){
 
 ## The good <ico>😻</ico>
 
-0. Write some unittests before implementation
-0. Write unittests for each function/file
-0. During implementation, add as many tests as possible
+0. Write some __unittests before implementation__
+0. Write unittests __for each__ function/file
+0. During __implementation__, __reinforce__ your tests
+0. Unittests must be __independents__
+
+
+## Before implementation
+```c
+void car_t_unittests(){
+  struct car_t* car = car_new(2, 5);//2 roues mot. 5 portes
+  assert(car->gaz == 40);//Réservoir plein
+  assert(car_move_km(car, 300) == 300);//on se déplace de 300km
+  assert(car->gaz == 10);//Il reste 10 L
+  assert(car_move_km(car, 200) == 100);//Panne au bout de 100km
+  assert(car_fill_gaz(car, 20));//On met 20L dans la voiture
+  assert(car->gaz == 20);//Il y a 20L
+}
+```
+Helps you setup a __clean API__
+
+
+## For each function/file
+```d
+//D
+class GpsPoint{
+  double lat, lon;
+  void setDMS(string value){
+    // Set lat, lon using degrees/minutes/seconds notation
+  }
+  unittest{ //Tests for setDMS
+    auto p = new GpsPoint();
+    p.setDMS("48°24'25.1886\",-4°29'44.4084\"");
+    assert(p.lat == 48.406997 && p.lon == -4.4956687);
+  }
+  ...
+}
+unittest{ //Tests for GpsPoint
+    auto a = new GpsPoint(48.0, -4.4);
+    a.goForward(90.0, 100);
+    a.inverseNorthSouth();
+    assert(p.lat == xxx && p.lon == xxx);
+}
+```
+<!-- .element: class="full-height" -->
+Just make sure __everything__ has its own unittests.
+
+
+## During implementation: reinforce
+
+- You know how it's __implemented__
+- You know which cases are __tricky__
+- Don't forget to add __more/better tests__
+
+Note: don't avoid tricky tests or they will hit you in the face
+
+
+## Independent unittests
+- One test __must not affect another__ test
+- Avoid __non-pure__
+  + Global variables
+  + Singleton classes
+  + I/O operation that are not dedicated to unittests
+    * File writing
+    * Send persistent data to web servers
+    * ...
 
 
 ## Keep in mind
@@ -139,12 +201,14 @@ int main(){
 ## Unittests as __documentation__
 ![](res/doc.gif)<!-- .element: class="full-height" -->
 
+Note: next is a tricky code example
+
 
 ## What does it do?
 
 ```c
-/// @brief resolve issue #666
-/// @param str input data
+/// @brief resolve bug #666
+/// @param size Number of magic bytes
 int do_some_magic(char *str) {
   int res = 0;
   int pol = 1;
@@ -169,22 +233,39 @@ void do_some_magic_unittests(){
     assert(do_some_magic("  - 5 2") == -52);
     assert(do_some_magic(" \t 1337  \t") == 1337);
     assert(do_some_magic("asdf") == 0);
-    assert(do_some_magic("123 456 fa") == 0);
+    assert(do_some_magic("a123 456") == 0);
 }
 ```
+
+
+## But... please...
+
+Don't be a freak, be efficient
+![](res/freak.gif)<!-- .element: class="full-height" -->
+
+Note:
+- No need to unittest 10 lines for every single function on earth
+- You can test called functions by testing the caller
+- You'll learn efficient unittesting with time
+- Library functions should not be unittested
 
 ------------------------------------------------------------
 <!-- .slide: data-background="#003367" -->
 # __Coverage__ analysis
 
 
-## Why
+## Why?
 Are you sure you tested everything?
-
 ![](res/alltested.gif)<!-- .element: class="full-height" -->
 
 
-### Example: GCC
+## What?
+- A __way to build/execute__ the program
+- Provided by __language tooling__
+- __Count__ each line __execution__
+
+
+## Example: GCC
 ```c
 #include <stdio.h>
 void leet_enc(const char* s){
@@ -205,6 +286,7 @@ int main(){
     return 0;
 }
 ```
+<!-- .element: class="full-height" -->
 
 
 ## Build for coverage
@@ -221,11 +303,7 @@ gcov test.c
 
 ## Output
 ```c
-    -:    0:Source:test.c
-    -:    0:Graph:test.gcno
-    -:    0:Data:test.gcda
-    -:    0:Runs:1
-    -:    0:Programs:1
+...
     -:    1:#include <stdio.h>
     2:    2:void leet_enc(const char* s){
    16:    3:    while(*s != '\0'){
@@ -245,10 +323,23 @@ gcov test.c
     1:   17:    return 0;
     -:   18:}
 ```
+<!-- .element: class="full-height" -->
+
+Conclusion: <span class="fragment">Test strings with `T` and `I`</span>
+
+Note: `| Exec count | Line No | Code |`
 
 ------------------------------------------------------------
 <!-- .slide: data-background="#003367" -->
 # __Contract__ programming
+
+
+## Why?
+- A way to __check__ functions
+  + Input (parameters)
+  + Output (return values)
+  + Each time they are called
+  + Without side effects
 
 
 ## In/Out contract
@@ -289,9 +380,9 @@ body{
 
 
 ## Remember
-- Only checks
-- No side effects
-- Do not change the function behaviour
+- __Only checks__
+- __No side effects__
+- __Do not change__ the function __behaviour__
 
 
 ## Invariant (Typestate?)
@@ -319,9 +410,9 @@ class GpsCoord{
 
 ## What if...
 
-- You forgot to run unittests
-- An evil guy breaks unittests, and don't notice
-- You don't want to double check every modification
+- You __forgot__ to run unittests
+- An __evil guy breaks the code__, without noticing
+- You __don't want to double check__ every modification
 
 
 ## Executing unittests is __boooooooooooooring__
@@ -375,9 +466,9 @@ Coverage Analysis
 
 ## Open source usage
 
-- Check merge requests
-- Enforce coding style
-- Prevent people from breaking anything<br/>(without getting blamed)
+- Check __merge/pull requests__
+- Enforce __coding style__
+- __Prevent__ people from __breaking__ anything<br/>(without getting blamed)
 
 
 ## dlang/phobos

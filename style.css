@@ -14,14 +14,17 @@ img.raw{
 	height: auto;
 }
 .full-width{
-	width: 100vw;
+	width: 800px;
 	height: auto;
 }
 .full-height{
-	height: calc(60vh + 100px);
+	height: 500px;
 	width: auto;
 }
-
+.full-height code{
+	height: calc(100% - 10px);
+	max-height: none !important;
+}
 
 ico{
 	font-size: 4rem;
@@ -30,6 +33,9 @@ ico{
 
 pre{
 	font-size: 1.3rem !important;
+}
+code{
+	font-family: consolas !important;
 }
 
 .fragment.switch{
