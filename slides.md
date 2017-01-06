@@ -101,7 +101,7 @@ _but we like it_
 ------------------------------------------------------------
 <!-- .slide: data-background="#421c0d" -->
 
-# __Unittests__
+# __Unit tests__
 
 
 ## May seems annoying
@@ -115,28 +115,28 @@ int main(){
     printf("===> %s\n", my_function(-1, 0));
 }
 ```
-- You're doing _manual_ unittests very often
+- You're doing _manual_ unit tests very often
 - This work shouldn't be wasted
 
 
 ## The ugly <ico>😡</ico>
 
 - Write test cases on paper/word/...
-- Start writing unittests after writing code
+- Start writing unit tests after writing code
 
 
 ## The bad <ico>😢</ico>
 
-- Think that unittests will slow you down
+- Think that unit tests will slow you down
 - Test some functions with typical values
 
 
 ## The good <ico>😻</ico>
 
-0. Write some __unittests before implementation__
-0. Write unittests __for each__ function/file
+0. Write some __unit tests before implementation__
+0. Write unit tests __for each__ function/file
 0. During __implementation__, __reinforce__ your tests
-0. Unittests must be __independents__
+0. Unit tests must be __independents__
 
 
 ## Before implementation
@@ -177,7 +177,7 @@ unittest{ //Tests for GpsPoint
 }
 ```
 <!-- .element: class="full-height" -->
-Just make sure __everything__ has its own unittests.
+Just make sure __everything__ has its own unit tests.
 
 
 ## During implementation: reinforce
@@ -189,12 +189,12 @@ Just make sure __everything__ has its own unittests.
 Note: don't avoid tricky tests or they will hit you in the face
 
 
-## Independent unittests
+## Independent unit tests
 - One test __must not affect another__ test
 - Avoid __non-pure__
   + Global variables
   + Singleton classes
-  + I/O operation that are not dedicated to unittests
+  + I/O operation that are not dedicated to unit tests
     * File writing
     * Send persistent data to web servers
     * ...
@@ -202,12 +202,12 @@ Note: don't avoid tricky tests or they will hit you in the face
 
 ## Keep in mind
 
-### Writing unittest __IS development__
+### Writing unit test __IS development__
 
 ### It helps you write __better code, faster__
 
 
-## Unittests as __documentation__
+## Unit tests as __documentation__
 ![](res/doc.gif)<!-- .element: class="full-height" -->
 
 Note: next is a tricky code example
@@ -253,10 +253,10 @@ Don't be a freak, be efficient
 ![](res/freak.gif)<!-- .element: class="full-height" -->
 
 Note:
-- No need to unittest 10 lines for every single function on earth
+- No need to unit test 10 lines for every single function on earth
 - You can test called functions by testing the caller
-- You'll learn efficient unittesting with time
-- Library functions should not be unittested
+- You'll learn efficient unit testing with time
+- Library functions should not be unit tested
 
 
 
@@ -445,12 +445,12 @@ class GpsCoord{
 
 ## What if...
 
-- You __forgot__ to run unittests
+- You __forgot__ to run unit tests
 - An __evil guy breaks the code__, without noticing
 - You __don't want to double check__ every modification
 
 
-## Executing unittests is __boooooooooooooring__
+## Executing unit tests is __boooooooooooooring__
 
 ...and I'm lazy
 
