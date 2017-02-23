@@ -59,13 +59,12 @@ Note: You need to be informed when & where it occurs, and handle it
 
 
 ## Time wasted
-<object id="linesofcodetimespent" data="res/linesofcodetimespent.svg" type="image/svg+xml"><!-- .element: class="raw full-height" -->
+<object id="linesofcodetimespent" data="res/linesofcodetimespent.svg" type="image/svg+xml" onload="linesofcodetimespent_load()"><!-- .element: class="raw full-height" -->
 <span id="linesofcodetimespent1" class="fragment"></span>
 <span id="linesofcodetimespent2" class="fragment"></span>
 <span id="linesofcodetimespent3" class="fragment"></span>
 <span id="linesofcodetimespent4" class="fragment"></span>
 <span id="linesofcodetimespent5" class="fragment"></span>
-<!-- .slide: data-state="linesofcodetimespent" -->
 
 
 ## True story: LCDA
