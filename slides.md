@@ -19,6 +19,8 @@ Note: I'll give key words
 
 ## __Q__uality __A__ssurance
 
+TODO
+
 - Some people are paid to do only this
 - Worst job ever?
 
@@ -519,6 +521,17 @@ Coverage Analysis
 ## dlang/phobos
 
 ![](res/ciexample.png)<!-- .element: class="full-width" -->
+
+
+## Process
+<object id="opensourceci" data="res/opensourceci.svg" type="image/svg+xml" onload="opensourceci_load()"><!-- .element: class="raw full-width" -->
+<span id="opensourceci1" class="fragment"></span>
+<span id="opensourceci2" class="fragment"></span>
+<span id="opensourceci3" class="fragment"></span>
+<span id="opensourceci4" class="fragment"></span>
+<span id="opensourceci5" class="fragment"></span>
+<span id="opensourceci6" class="fragment"></span>
+
 
 ------------------------------------------------------------
 <!-- .slide: data-background="#421c0d" -->

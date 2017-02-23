@@ -9,7 +9,13 @@ function linesofcodetimespent_load(){
 	animations.linesofcodetimespent4.hide(s);
 }
 
+function opensourceci_load(){
+	var s = Snap("#opensourceci");
+	animations.opensourceci1.hide(s);
+}
+
 var animations = {
+	//==========================================================================
 	linesofcodetimespent1: {
 		show: function(s){ s.select("#frag1").animate({opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
 		hide: function(s){ s.select("#frag1").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 700); },
@@ -42,6 +48,83 @@ var animations = {
 			s.select("#curve").animate({d : "m5.29 33.4c21-4 51.4-8.98 57.4-33"}, 1000, mina.easeinout);
 		},
 	},
+
+	//==========================================================================
+	opensourceci1: {
+		show: function(s){
+			s.select("#walls").animate({opacity: 1, transform: "translate(2.65)"}, 700, mina.easeinout);
+			s.select("#arrow").animate({d: "m63.4 66.8h2"}, 500, mina.easeinout);
+			s.selectAll("[id^=frag_text]").animate({opacity: 0}, 0);
+		},
+		hide: function(s){
+			s.select("#walls").animate({opacity: 0, transform: "translate(2.65 -20)"}, 200);
+			s.select("#arrow").animate({d: "m63.4 66.8h23.8"}, 200);
+		},
+	},
+	opensourceci2: {
+		show: function(s){
+			s.select("#arrow").animate({d: "m63.4 66.8h3"}, 500, mina.bounce);
+			s.select("#frag_text1").animate({opacity: 1}, 500);
+		},
+		hide: function(s){
+			s.select("#arrow").animate({d: "m63.4 66.8h2"}, 200);
+			s.select("#frag_text1").animate({opacity: 0}, 200);
+		},
+	},
+	opensourceci3: {
+		show: function(s){
+			s.select("#arrow").animate({d: "m63.4 66.8h8.3"}, 300, mina.backin);
+			s.select("#frag_text1").animate({opacity: 0}, 200);
+			s.select("#frag_text2").animate({opacity: 1}, 500);
+			s.select("#frag_wall1").animate({d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
+		},
+		hide: function(s){
+			s.select("#arrow").animate({d: "m63.4 66.8h3"}, 200);
+			s.select("#frag_text1").animate({opacity: 1}, 200);
+			s.select("#frag_text2").animate({opacity: 0}, 200);
+			s.select("#frag_wall1").animate({d: "m63.5 58.9 1e-6 6.61v6.61", opacity: 1, stroke: "#f60"}, 200);
+		},
+	},
+	opensourceci4: {
+		show: function(s){
+			s.select("#arrow").animate({d: "m63.4 66.8h13.6"}, 300, mina.backin);
+			s.select("#frag_text2").animate({opacity: 0}, 200);
+			s.select("#frag_text3").animate({opacity: 1}, 500);
+			s.select("#frag_wall2").animate({d: "m71.4 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
+		},
+		hide: function(s){
+			s.select("#arrow").animate({d: "m63.4 66.8h8"}, 200);
+			s.select("#frag_text2").animate({opacity: 1}, 200);
+			s.select("#frag_text3").animate({opacity: 0}, 200);
+			s.select("#frag_wall2").animate({d: "m71.4 58.9v6.61 6.61", opacity: 1, stroke: "#f60"}, 200);
+		},
+	},
+	opensourceci5: {
+		show: function(s){
+			s.select("#arrow").animate({d: "m63.4 66.8h18.9"}, 300, mina.backin);
+			s.select("#frag_text3").animate({opacity: 0}, 200);
+			s.select("#frag_text4").animate({opacity: 1}, 500);
+			s.select("#frag_wall3").animate({d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
+		},
+		hide: function(s){
+			s.select("#arrow").animate({d: "m63.4 66.8h13"}, 200);
+			s.select("#frag_text3").animate({opacity: 1}, 200);
+			s.select("#frag_text4").animate({opacity: 0}, 200);
+			s.select("#frag_wall3").animate({d: "m63.5 58.9 1e-6 6.61-1e-6 6.61", opacity: 1, stroke: "#f60"}, 200);
+		},
+	},
+	opensourceci6: {
+		show: function(s){
+			s.select("#frag_text4").animate({opacity: 0}, 200);
+			s.select("#arrow").animate({d: "m63.4 66.8h23.8"}, 300, mina.backin);
+			s.select("#frag_wall4").animate({d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
+		},
+		hide: function(s){
+			s.select("#frag_text4").animate({opacity: 1}, 200);
+			s.select("#arrow").animate({d: "m63.4 66.8h18.9"}, 200);
+			s.select("#frag_wall4").animate({d: "m63.5 58.9v6.61 6.61", opacity: 1, stroke: "#f60"}, 200);
+		},
+	}
 }
 
 
