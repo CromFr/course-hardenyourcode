@@ -3,24 +3,24 @@
 // Called by <object id='linesofcodetimespent'> onload
 function linesofcodetimespent_load(){
 	var s = Snap("#linesofcodetimespent");
-	s.select("#frag1").animate({opacity: 0}, 0);
-	s.select("#frag2").animate({opacity: 0}, 0);
-	s.select("#frag3").animate({opacity: 0}, 0);
-	s.select("#frag4").animate({opacity: 0}, 0);
+	animations.linesofcodetimespent1.hide(s);
+	animations.linesofcodetimespent2.hide(s);
+	animations.linesofcodetimespent3.hide(s);
+	animations.linesofcodetimespent4.hide(s);
 }
 
 var animations = {
 	linesofcodetimespent1: {
-		show: function(s){ s.select("#frag1").animate({opacity: 1}, 700); },
-		hide: function(s){ s.select("#frag1").animate({opacity: 0}, 700); },
+		show: function(s){ s.select("#frag1").animate({opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
+		hide: function(s){ s.select("#frag1").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 700); },
 	},
 	linesofcodetimespent2: {
-		show: function(s){ s.select("#frag2").animate({opacity: 1}, 700); },
-		hide: function(s){ s.select("#frag2").animate({opacity: 0}, 700); },
+		show: function(s){ s.select("#frag2").animate({opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
+		hide: function(s){ s.select("#frag2").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 700); },
 	},
 	linesofcodetimespent3: {
-		show: function(s){ s.select("#frag3").animate({opacity: 1}, 700); },
-		hide: function(s){ s.select("#frag3").animate({opacity: 0}, 700); },
+		show: function(s){ s.select("#frag3").animate({opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
+		hide: function(s){ s.select("#frag3").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 700); },
 	},
 	linesofcodetimespent4: {
 		show: function(s){ s.select("#frag4").animate({opacity: 1}, 700); },
@@ -44,10 +44,10 @@ var animations = {
 	},
 }
 
+
+
+
 Reveal.addEventListener('ready', function(event) {
-
-
-
 	Reveal.addEventListener('fragmentshown', function(event) {
 		if(event.fragment.id in animations){
 			var svg_id = event.fragment.id.replace(/\d+$/, "");
