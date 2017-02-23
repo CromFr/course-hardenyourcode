@@ -1,7 +1,7 @@
 
-# __Harden__
-![](res/intro.svg)<!-- .element: class="raw" style="height: 40%; width: auto; opacity: 0.7;" -->
-# your `<code/>`
+## __Harden__
+![](res/intro.svg)<!-- .element: class="raw" style="height: 200px; width: auto; opacity: 0.7;" -->
+## your `<code/>`
 
 
 ## Disclaimer
@@ -10,6 +10,7 @@
 - Can be applied to:
   + __Any language__
   + __Any target__ (native app, web, embedded...)
+- Useful for __small__ to __big__ projects
 
 - Always __good__ <ico>😉</ico>
 
@@ -92,7 +93,7 @@ Note: You need to be informed when & where it occurs, and handle it
 
 
 ## Development hurts...
-![](res/pain.gif)<!-- .element: class="full-height" -->
+![](res/pain.gif)<!-- .element: class="almost-full-height" -->
 
 _but we like it_
 
@@ -185,8 +186,7 @@ unittest{ //Tests for GpsPoint
     assert(p.lat == xxx && p.lon == xxx);
 }
 ```
-<!-- .element: class="full-height" -->
-Just make sure __everything__ has its own unit tests.
+<!-- .element: class="full-height" -->Just make sure __everything__ has its own unit tests.
 
 
 ## During implementation: reinforce
@@ -216,8 +216,8 @@ Note: don't avoid tricky tests or they will hit you in the face
 ### It helps you write __better code, faster__
 
 
-## Unit tests as __documentation__
-![](res/doc.gif)<!-- .element: class="full-height" -->
+## Unit tests as ... __documentation__
+![](res/doc.gif)<!-- .element: class="almost-full-height" -->
 
 Note: next is a tricky code example
 
@@ -259,10 +259,10 @@ void do_some_magic_unittests(){
 ## But... please...
 
 Don't be a freak, be efficient
-![](res/freak.gif)<!-- .element: class="full-height" -->
+![](res/freak.gif)<!-- .element: class="almost-full-height" -->
 
 Note:
-- No need to unit test 10 lines for every single function on earth
+- No need to write 10 lines for every function on earth
 - You can test called functions by testing the caller
 - You'll learn efficient unit testing with time
 - Library functions should not be unit tested
@@ -282,7 +282,7 @@ Note:
 
 ## Why?
 Are you sure you tested everything?
-![](res/alltested.gif)<!-- .element: class="full-height" -->
+![](res/alltested.gif)<!-- .element: class="almost-full-height" -->
 
 
 ## What?
@@ -329,7 +329,6 @@ gcov test.c
 
 ## Output
 ```c
-...
     -:    1:#include <stdio.h>
     2:    2:void leet_enc(const char* s){
    16:    3:    while(*s != '\0'){
@@ -349,17 +348,18 @@ gcov test.c
     1:   17:    return 0;
     -:   18:}
 ```
-<!-- .element: class="full-height" -->
+<!-- .element: class="full-height" -->Conclusion: <span class="fragment">Test strings with `T` and `I`</span>
 
-Conclusion: <span class="fragment">Test strings with `T` and `I`</span>
 
 Note: `| Exec count | Line No | Code |`
 
 
 ## Advice
 
-Dont fake your ratio by calling functions without checks
-![](res/enlarge.gif)<!-- .element: class="full-height" -->
+Don't fake your ratio<br/>
+by calling functions without checks
+
+![](res/enlarge.gif)<!-- .element: class="almost-full-height" -->
 
 
 
@@ -367,7 +367,7 @@ Dont fake your ratio by calling functions without checks
 
 ------------------------------------------------------------
 <!-- .slide: data-background="#421c0d" -->
-# __Contract__ programming
+# __Contract__ programing
 
 
 ## Why?
@@ -468,7 +468,7 @@ class GpsCoord{
 
 ## Here comes automation!
 
-![](res/hoveringdog.gif)<!-- .element: class="full-height" -->
+![](res/hoveringdog.gif)<!-- .element: class="almost-full-height" -->
 
 
 ## TravisCI (GitHub)
@@ -501,7 +501,7 @@ Coverage Analysis
 
 ## Be proud !
 
-### `github.com/CromFr/nwn-lib-d`
+#### `github.com/CromFr/nwn-lib-d`
 
 [![Build Status](https://travis-ci.org/CromFr/nwn-lib-d.svg?branch=master)<!-- .element: class="raw" style="width: 30%" -->](https://travis-ci.org/CromFr/nwn-lib-d)
 
@@ -511,8 +511,9 @@ Coverage Analysis
 ## Open source usage
 
 - Check __merge/pull requests__
-- Enforce __coding style__
+- Enforce __coding style__, __coverage__ quality
 - __Prevent__ people from __breaking__ anything<br/>(without getting blamed)
+- Build, test, __deploy__ from a __trusted__ environment
 
 
 ## dlang/phobos
@@ -523,7 +524,8 @@ Coverage Analysis
 <!-- .slide: data-background="#421c0d" -->
 
 # Bonus stage
-![](res/extra.png)<!-- .element: class="raw full-height" -->
+![](res/extra.png)<!-- .element: class="raw almost-full-height" -->
+<footer>ExtraCredits</footer>
 
 
 ## Handling inter-dependencies
@@ -535,20 +537,20 @@ Coverage Analysis
 
 ## Exception vs Assertion
 
-- Exceptions are for:
-  + Errors that are created by the user
-  + Examples:
-    * Access denied
-    * Malformed XML
-- Assertions
-  + A debugging tool
-  + If it happens, it's the developer's fault
-  + Examples:
-    * Division by 0
-    * Pointer exceptions
+- __Exceptions__ are for:
+  + Errors that are created by the __user__
+  + Ex: Access denied, Malformed XML
+- __Assertions__
+  + A __debugging__ tool
+  + If it happens, it's the __developer's fault__
+  + ex: Division by 0, Pointer exceptions
 
 
 ## The compiler is your best friend
+
+...or a powerful linter
+
+Notes: Rust's memory management
 
 
 ### `less_code && less_duplications`
@@ -561,6 +563,7 @@ Coverage Analysis
 - gofmt
 - clang-format
 - dfmt
+- rustfmt
 - ...
 
 
@@ -575,4 +578,5 @@ Coverage Analysis
 <!-- .slide: data-background="#421c0d" -->
 
 # (?)
-![](res/questions.jpg)<!-- .element: class="full-height" -->
+![](res/questions.jpg)<!-- .element: class="almost-full-height" -->
+<footer>ExtraCredits</footer>

@@ -21,9 +21,9 @@ img.raw{
 	height: 500px;
 	width: auto;
 }
-.full-height code{
-	height: calc(100% - 10px);
-	max-height: none !important;
+.almost-full-height{
+	height: 400px;
+	width: auto;
 }
 
 ico{
@@ -35,7 +35,7 @@ pre{
 	font-size: 1.3rem !important;
 }
 code{
-	font-family: consolas !important;
+	font-family: "consolas", monospace !important;
 }
 
 .fragment.switch{
@@ -43,4 +43,12 @@ code{
 }
 .fragment.switch.current-fragment{
 	display: block;
+}
+
+.slides section footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+	font-size: 0.4em;
 }
