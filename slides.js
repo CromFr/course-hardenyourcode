@@ -3,146 +3,145 @@
 // Called by <object id='linesofcodetimespent'> onload
 function linesofcodetimespent_load(){
 	var s = Snap("#linesofcodetimespent");
-	animations.linesofcodetimespent1.hide(s);
-	animations.linesofcodetimespent2.hide(s);
-	animations.linesofcodetimespent3.hide(s);
-	animations.linesofcodetimespent4.hide(s);
+	s.select("#frag1").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 0);
+	s.select("#frag2").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 0);
+	s.select("#frag3").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 0);
+	s.select("#frag4").animate({opacity: 0}, 0);
 }
 
 function opensourceci_load(){
 	var s = Snap("#opensourceci");
-	animations.opensourceci1.hide(s);
+	s.selectAll("[id^=frag_text]").animate({opacity: 0}, 0);
+	s.select("#walls").animate({opacity: 0, transform: "translate(2.65)"}, 0);
 }
+
 
 var animations = {
 	//==========================================================================
 	linesofcodetimespent1: {
-		show: function(s){ s.select("#frag1").animate({opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
-		hide: function(s){ s.select("#frag1").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 700); },
+		anim: function(id){
+			svgAnimate(id, "#frag1", {opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce);
+		},
 	},
 	linesofcodetimespent2: {
-		show: function(s){ s.select("#frag2").animate({opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
-		hide: function(s){ s.select("#frag2").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 700); },
+		anim: function(id){ svgAnimate(id, "#frag2", {opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
 	},
 	linesofcodetimespent3: {
-		show: function(s){ s.select("#frag3").animate({opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
-		hide: function(s){ s.select("#frag3").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 700); },
+		anim: function(id){ svgAnimate(id, "#frag3", {opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
 	},
 	linesofcodetimespent4: {
-		show: function(s){ s.select("#frag4").animate({opacity: 1}, 700); },
-		hide: function(s){ s.select("#frag4").animate({opacity: 0}, 700); },
+		anim: function(id){ svgAnimate(id, "#frag4", {opacity: 1}, 700); },
 	},
 	linesofcodetimespent5: {
-		show: function(s){
-			s.select("#frag1").animate({opacity: 0}, 300);
-			s.select("#frag2").animate({opacity: 0}, 300);
-			s.select("#frag3").animate({opacity: 0}, 300);
-			s.select("#frag4").animate({opacity: 0}, 300);
-			s.select("#curve").animate({d : "m 5.2916665,23 c 10,10  20,10  57,10"}, 3000, mina.easeinout);
-		},
-		hide: function(s){
-			s.select("#frag1").animate({opacity: 1}, 300);
-			s.select("#frag2").animate({opacity: 1}, 300);
-			s.select("#frag3").animate({opacity: 1}, 300);
-			s.select("#frag4").animate({opacity: 1}, 300);
-			s.select("#curve").animate({d : "m5.29 33.4c21-4 51.4-8.98 57.4-33"}, 1000, mina.easeinout);
+		anim: function(id){
+			svgAnimate(id, "#frag1", {opacity: 0}, 300);
+			svgAnimate(id, "#frag2", {opacity: 0}, 300);
+			svgAnimate(id, "#frag3", {opacity: 0}, 300);
+			svgAnimate(id, "#frag4", {opacity: 0}, 300);
+			svgAnimate(id, "#curve", {d : "m 5.2916665,23 c 10,10  20,10  57,10"}, 3000, mina.easeinout);
 		},
 	},
 
 	//==========================================================================
 	opensourceci1: {
-		show: function(s){
-			s.select("#walls").animate({opacity: 1, transform: "translate(2.65)"}, 700, mina.easeinout);
-			s.select("#arrow").animate({d: "m63.4 66.8h2"}, 500, mina.easeinout);
-			s.selectAll("[id^=frag_text]").animate({opacity: 0}, 0);
-		},
-		hide: function(s){
-			s.select("#walls").animate({opacity: 0, transform: "translate(2.65 -20)"}, 200);
-			s.select("#arrow").animate({d: "m63.4 66.8h23.8"}, 200);
+		anim: function(id){
+			svgAnimate(id, "#walls", {opacity: 1, transform: "translate(2.65)"}, 700, mina.easeinout);
+			svgAnimate(id, "#arrow", {d: "m63.4 66.8h2"}, 500, mina.easeinout);
 		},
 	},
 	opensourceci2: {
-		show: function(s){
-			s.select("#arrow").animate({d: "m63.4 66.8h3"}, 500, mina.bounce);
-			s.select("#frag_text1").animate({opacity: 1}, 500);
-		},
-		hide: function(s){
-			s.select("#arrow").animate({d: "m63.4 66.8h2"}, 200);
-			s.select("#frag_text1").animate({opacity: 0}, 200);
+		anim: function(id){
+			svgAnimate(id, "#arrow", {d: "m63.4 66.8h3"}, 500, mina.bounce);
+			svgAnimate(id, "#frag_text1", {opacity: 1}, 500);
 		},
 	},
 	opensourceci3: {
-		show: function(s){
-			s.select("#arrow").animate({d: "m63.4 66.8h8.3"}, 300, mina.backin);
-			s.select("#frag_text1").animate({opacity: 0}, 200);
-			s.select("#frag_text2").animate({opacity: 1}, 500);
-			s.select("#frag_wall1").animate({d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
-		},
-		hide: function(s){
-			s.select("#arrow").animate({d: "m63.4 66.8h3"}, 200);
-			s.select("#frag_text1").animate({opacity: 1}, 200);
-			s.select("#frag_text2").animate({opacity: 0}, 200);
-			s.select("#frag_wall1").animate({d: "m63.5 58.9 1e-6 6.61v6.61", opacity: 1, stroke: "#f60"}, 200);
+		anim: function(id){
+			svgAnimate(id, "#arrow", {d: "m63.4 66.8h8.3"}, 300, mina.backin);
+			svgAnimate(id, "#frag_text1", {opacity: 0}, 200);
+			svgAnimate(id, "#frag_text2", {opacity: 1}, 500);
+			svgAnimate(id, "#frag_wall1", {d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 		},
 	},
 	opensourceci4: {
-		show: function(s){
-			s.select("#arrow").animate({d: "m63.4 66.8h13.6"}, 300, mina.backin);
-			s.select("#frag_text2").animate({opacity: 0}, 200);
-			s.select("#frag_text3").animate({opacity: 1}, 500);
-			s.select("#frag_wall2").animate({d: "m71.4 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
-		},
-		hide: function(s){
-			s.select("#arrow").animate({d: "m63.4 66.8h8"}, 200);
-			s.select("#frag_text2").animate({opacity: 1}, 200);
-			s.select("#frag_text3").animate({opacity: 0}, 200);
-			s.select("#frag_wall2").animate({d: "m71.4 58.9v6.61 6.61", opacity: 1, stroke: "#f60"}, 200);
+		anim: function(id){
+			svgAnimate(id, "#arrow", {d: "m63.4 66.8h13.6"}, 300, mina.backin);
+			svgAnimate(id, "#frag_text2", {opacity: 0}, 200);
+			svgAnimate(id, "#frag_text3", {opacity: 1}, 500);
+			svgAnimate(id, "#frag_wall2", {d: "m71.4 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 		},
 	},
 	opensourceci5: {
-		show: function(s){
-			s.select("#arrow").animate({d: "m63.4 66.8h18.9"}, 300, mina.backin);
-			s.select("#frag_text3").animate({opacity: 0}, 200);
-			s.select("#frag_text4").animate({opacity: 1}, 500);
-			s.select("#frag_wall3").animate({d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
-		},
-		hide: function(s){
-			s.select("#arrow").animate({d: "m63.4 66.8h13"}, 200);
-			s.select("#frag_text3").animate({opacity: 1}, 200);
-			s.select("#frag_text4").animate({opacity: 0}, 200);
-			s.select("#frag_wall3").animate({d: "m63.5 58.9 1e-6 6.61-1e-6 6.61", opacity: 1, stroke: "#f60"}, 200);
+		anim: function(id){
+			svgAnimate(id, "#arrow", {d: "m63.4 66.8h18.9"}, 300, mina.backin);
+			svgAnimate(id, "#frag_text3", {opacity: 0}, 200);
+			svgAnimate(id, "#frag_text4", {opacity: 1}, 500);
+			svgAnimate(id, "#frag_wall3", {d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 		},
 	},
 	opensourceci6: {
-		show: function(s){
-			s.select("#frag_text4").animate({opacity: 0}, 200);
-			s.select("#arrow").animate({d: "m63.4 66.8h23.8"}, 300, mina.backin);
-			s.select("#frag_wall4").animate({d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
-		},
-		hide: function(s){
-			s.select("#frag_text4").animate({opacity: 1}, 200);
-			s.select("#arrow").animate({d: "m63.4 66.8h18.9"}, 200);
-			s.select("#frag_wall4").animate({d: "m63.5 58.9v6.61 6.61", opacity: 1, stroke: "#f60"}, 200);
+		anim: function(id){
+			svgAnimate(id, "#frag_text4", {opacity: 0}, 200);
+			svgAnimate(id, "#arrow", {d: "m63.4 66.8h23.8"}, 300, mina.backin);
+			svgAnimate(id, "#frag_wall4", {d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 		},
 	}
 }
 
 
+function svgAnimate(id, selector, attrs, duration, easing, callback){
+	if(id in animations){
+		var svg_id = id.replace(/\d+$/, "");
+		var svg = Snap("#"+svg_id).select(selector);
+
+		if(!("init" in animations[id])){
+			animations[id].init = {};
+		}
+		if(!(selector in animations[id].init)){
+			var initAttrs = {};
+			for (var key in attrs){
+				if(key in svg.attr())
+					initAttrs[key] = svg.attr()[key];
+				else{
+					//find in style attr
+					var style = window.getComputedStyle(svg.node);
+					initAttrs[key] = style[key];
+				}
+			}
+
+			animations[id].init[selector] = initAttrs;
+		}
+
+		svg.animate(attrs, duration, easing, callback);
+	}
+	else
+		console.warn("could not find fragment ID=",id," in animations table");
+}
+
+function svgResetAnimation(id){
+	if(id in animations && "init" in animations[id]){
+		var svg_id = id.replace(/\d+$/, "");
+		var svg_main = Snap("#"+svg_id);
+
+		for (var selector in animations[id].init){
+			var svg = svg_main.select(selector);
+			svg.animate(animations[id].init[selector], 200);
+		}
+	}
+	else
+		console.warn("could not find fragment ID=",id," in animations table");
+}
 
 
 Reveal.addEventListener('ready', function(event) {
 	Reveal.addEventListener('fragmentshown', function(event) {
 		if(event.fragment.id in animations){
-			var svg_id = event.fragment.id.replace(/\d+$/, "");
-			var s = Snap("#"+svg_id);
-			animations[event.fragment.id].show(s);
+			animations[event.fragment.id].anim(event.fragment.id);
 		}
 	});
 	Reveal.addEventListener('fragmenthidden', function(event) {
 		if(event.fragment.id in animations){
-			var svg_id = event.fragment.id.replace(/\d+$/, "");
-			var s = Snap("#"+svg_id);
-			animations[event.fragment.id].hide(s);
+			svgResetAnimation(event.fragment.id);
 		}
 	});
 });
