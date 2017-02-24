@@ -3,31 +3,27 @@
 // Called by <object id='linesofcodetimespent'> onload
 function linesofcodetimespent_load(){
 	var s = Snap("#linesofcodetimespent");
-	s.select("#frag1").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 0);
-	s.select("#frag2").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 0);
-	s.select("#frag3").animate({opacity: 0, transform: "translate(-88.6 -150)"}, 0);
+	s.selectAll("#frag1,#frag2,#frag3").animate({opacity: 0, transform: "translate(0 -20)"}, 0);
 	s.select("#frag4").animate({opacity: 0}, 0);
 }
 
 function opensourceci_load(){
 	var s = Snap("#opensourceci");
 	s.selectAll("[id^=frag_text]").animate({opacity: 0}, 0);
-	s.select("#walls").animate({opacity: 0, transform: "translate(2.65)"}, 0);
+	s.select("#walls").animate({opacity: 0, transform: "translate(0 -20)"}, 0);
 }
 
 
 var animations = {
 	//==========================================================================
 	linesofcodetimespent1: {
-		anim: function(id){
-			svgAnimate(id, "#frag1", {opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce);
-		},
+		anim: function(id){ svgAnimate(id, "#frag1", {opacity: 1, transform: "translate(0 0)"}, 700, mina.bounce); },
 	},
 	linesofcodetimespent2: {
-		anim: function(id){ svgAnimate(id, "#frag2", {opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
+		anim: function(id){ svgAnimate(id, "#frag2", {opacity: 1, transform: "translate(0 0)"}, 700, mina.bounce); },
 	},
 	linesofcodetimespent3: {
-		anim: function(id){ svgAnimate(id, "#frag3", {opacity: 1, transform: "translate(-88.6 -127)"}, 700, mina.bounce); },
+		anim: function(id){ svgAnimate(id, "#frag3", {opacity: 1, transform: "translate(0 0)"}, 700, mina.bounce); },
 	},
 	linesofcodetimespent4: {
 		anim: function(id){ svgAnimate(id, "#frag4", {opacity: 1}, 700); },
@@ -38,52 +34,52 @@ var animations = {
 			svgAnimate(id, "#frag2", {opacity: 0}, 300);
 			svgAnimate(id, "#frag3", {opacity: 0}, 300);
 			svgAnimate(id, "#frag4", {opacity: 0}, 300);
-			svgAnimate(id, "#curve", {d : "m 5.2916665,23 c 10,10  20,10  57,10"}, 3000, mina.easeinout);
+			svgAnimate(id, "#curve", {d : "m 5,20 c 10,10  15,13  58 13"}, 2000, mina.easeinout);
 		},
 	},
 
 	//==========================================================================
 	opensourceci1: {
 		anim: function(id){
-			svgAnimate(id, "#walls", {opacity: 1, transform: "translate(2.65)"}, 700, mina.easeinout);
-			svgAnimate(id, "#arrow", {d: "m63.4 66.8h2"}, 500, mina.easeinout);
+			svgAnimate(id, "#walls", {opacity: 1, transform: "translate(0)"}, 700, mina.easeinout);
+			svgAnimate(id, "#arrow", {d: "m6 10h3"}, 500, mina.easeinout);
 		},
 	},
 	opensourceci2: {
 		anim: function(id){
-			svgAnimate(id, "#arrow", {d: "m63.4 66.8h3"}, 500, mina.bounce);
+			svgAnimate(id, "#arrow", {d: "m6 10h8"}, 500, mina.bounce);
 			svgAnimate(id, "#frag_text1", {opacity: 1}, 500);
 		},
 	},
 	opensourceci3: {
 		anim: function(id){
-			svgAnimate(id, "#arrow", {d: "m63.4 66.8h8.3"}, 300, mina.backin);
+			svgAnimate(id, "#arrow", {d: "m6 10h13"}, 300, mina.backin);
+			svgAnimate(id, "#frag_wall1", {d: "m15 4  1.5 6  -1.5 6", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 			svgAnimate(id, "#frag_text1", {opacity: 0}, 200);
 			svgAnimate(id, "#frag_text2", {opacity: 1}, 500);
-			svgAnimate(id, "#frag_wall1", {d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 		},
 	},
 	opensourceci4: {
 		anim: function(id){
-			svgAnimate(id, "#arrow", {d: "m63.4 66.8h13.6"}, 300, mina.backin);
+			svgAnimate(id, "#arrow", {d: "m6 10h18"}, 300, mina.backin);
+			svgAnimate(id, "#frag_wall2", {d: "m20 4  1.5 6  -1.5 6", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 			svgAnimate(id, "#frag_text2", {opacity: 0}, 200);
 			svgAnimate(id, "#frag_text3", {opacity: 1}, 500);
-			svgAnimate(id, "#frag_wall2", {d: "m71.4 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 		},
 	},
 	opensourceci5: {
 		anim: function(id){
-			svgAnimate(id, "#arrow", {d: "m63.4 66.8h18.9"}, 300, mina.backin);
+			svgAnimate(id, "#arrow", {d: "m6 10h23"}, 300, mina.backin);
+			svgAnimate(id, "#frag_wall3", {d: "m25 4  1.5 6  -1.5 6", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 			svgAnimate(id, "#frag_text3", {opacity: 0}, 200);
 			svgAnimate(id, "#frag_text4", {opacity: 1}, 500);
-			svgAnimate(id, "#frag_wall3", {d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 		},
 	},
 	opensourceci6: {
 		anim: function(id){
+			svgAnimate(id, "#arrow", {d: "m6 10h28"}, 300, mina.backin);
+			svgAnimate(id, "#frag_wall4", {d: "m30 4  1.5 6  -1.5 6", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 			svgAnimate(id, "#frag_text4", {opacity: 0}, 200);
-			svgAnimate(id, "#arrow", {d: "m63.4 66.8h23.8"}, 300, mina.backin);
-			svgAnimate(id, "#frag_wall4", {d: "m63.5 58.9   1.5 6.61  -1.5 6.61", opacity: 0.5, stroke: "#0f0"}, 300, mina.backin);
 		},
 	}
 }

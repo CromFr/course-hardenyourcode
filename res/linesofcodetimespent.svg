@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="65mm" height="40mm" version="1.1" viewBox="0 0 65 40" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<defs>
+		<style type="text/css"><![CDATA[ @font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; src: local("Open Sans"), local("OpenSans"), url("https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; } ]]></style>
+	</defs>
 	<metadata>
 		<rdf:RDF>
 			<cc:Work rdf:about="">
@@ -10,24 +13,24 @@
 		</rdf:RDF>
 	</metadata>
 	<g>
-		<path d="m3.97 2.96 1.32-1.32v33.1h58.2l-1.32 1.32" fill="none" stroke="#fefefe" stroke-width=".265px"/>
-		<path id="curve" d="m5.29 33.4c21-4 51.4-8.98 57.4-33" fill="none" stroke="#fefefe" stroke-width=".5"/>
-		<text x="35.71875" y="38.677082" fill="#ffffff" font-family="sans-serif" font-size="3.53px" letter-spacing="0px" stroke-width=".265px" word-spacing="0px" style="line-height:2.64583325px" xml:space="preserve"><tspan x="35.71875" y="38.677082" fill="#ffffff" font-size="2.82px" stroke-width=".265px" text-align="center" text-anchor="middle">Lines of code</tspan></text>
-		<text transform="rotate(-90)" x="-18.833334" y="3.96875" fill="#ffffff" font-family="sans-serif" font-size="3.53px" letter-spacing="0px" stroke-width=".265px" word-spacing="0px" style="line-height:2.64583325px" xml:space="preserve"><tspan x="-18.833334" y="3.96875" fill="#ffffff" font-size="2.82px" stroke-width=".265px" text-align="center" text-anchor="middle">Time spent</tspan></text>
+		<path id="curve" d="m5 33c20-3 50-8 58-32" fill="none" stroke="#fefefe" stroke-width=".5"/>
+		<text x="35" y="38" fill="#ffffff" font-family="'Open Sans'" font-size="3.53px" letter-spacing="0px" stroke-width=".265px" word-spacing="0px" style="line-height:2.64583325px" xml:space="preserve"><tspan x="35" y="38" fill="#ffffff" font-family="'Open Sans'" font-size="2.82px" stroke-width=".265px" text-align="center" text-anchor="middle">Lines of code</tspan></text>
+		<text transform="rotate(-90)" x="-18" y="4" fill="#ffffff" font-family="'Open Sans'" font-size="3.53px" letter-spacing="0px" stroke-width=".265px" word-spacing="0px" style="line-height:2.64583325px" xml:space="preserve"><tspan x="-18" y="4" fill="#ffffff" font-family="'Open Sans'" font-size="2.82px" stroke-width=".265px" text-align="center" text-anchor="middle">Time spent</tspan></text>
 	</g>
-	<g id="frag1" transform="translate(-88.6 -127)" stroke-width=".265px">
-		<path d="m122 150v11.9" fill="none" stroke="#d20000"/>
-		<text x="120.38541" y="151.47917" fill="#ffffff" font-family="sans-serif" font-size="2.12px" letter-spacing="0px" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:0px" xml:space="preserve"><tspan x="120.38541" y="151.47917" text-align="end" style="line-height:0px">You stop working</tspan><tspan x="120.38541" y="153.67853" text-align="end" style="line-height:0px">on your side-project</tspan></text>
+	<g id="frag1">
+		<path d="m33 22v13" fill="none" stroke="#ff2a2a" stroke-width=".397"/>
+		<text x="32" y="24" fill="#ffffff" font-family="'Open Sans'" font-size="2.12px" letter-spacing="0px" stroke-width=".265px" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:0px" xml:space="preserve"><tspan x="32" y="24" text-align="end" style="line-height:0px">You stop working</tspan><tspan x="32" y="26.199356" text-align="end" style="line-height:0px">on your side-project</tspan></text>
 	</g>
-	<g id="frag2" transform="translate(-88.6 -127)" stroke-width=".265px">
-		<path d="m132 141v21.2" fill="none" stroke="#d20000"/>
-		<text x="130.96875" y="143.54167" fill="#ffffff" font-family="sans-serif" font-size="2.12px" letter-spacing="0px" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:0px" xml:space="preserve"><tspan x="130.96875" y="143.54167" text-align="end" style="line-height:0px">Half of your time is spent</tspan><tspan x="130.96875" y="145.74103" text-align="end" style="line-height:0px">on bugs/regressions</tspan></text>
+	<g id="frag2">
+		<path d="m44 14v21" fill="none" stroke="#ff2a2a" stroke-width=".397"/>
+		<text x="43" y="15.999999" fill="#ffffff" font-family="'Open Sans'" font-size="2.12px" letter-spacing="0px" stroke-width=".265px" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:0px" xml:space="preserve"><tspan x="43" y="15.999999" text-align="end" style="line-height:0px">Half of your time is spent</tspan><tspan x="43" y="18.199356" text-align="end" style="line-height:0px">on bugs/regressions</tspan></text>
 	</g>
-	<g id="frag3" transform="translate(-88.6 -127)" stroke-width=".265px">
-		<path d="m143 133v29.1" fill="none" stroke="#d20000"/>
-		<text x="141.55208" y="135.60417" fill="#ffffff" font-family="sans-serif" font-size="2.12px" letter-spacing="0px" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:0px" xml:space="preserve"><tspan x="141.55208" y="135.60417" text-align="end" style="line-height:0px">Code will never be modified,</tspan><tspan x="141.55208" y="137.80353" text-align="end" style="line-height:0px">even if it has bugs</tspan></text>
+	<g id="frag3">
+		<path d="m55 6v29" fill="none" stroke="#ff2a2a" stroke-width=".397"/>
+		<text x="54" y="7.9999995" fill="#ffffff" font-family="'Open Sans'" font-size="2.12px" letter-spacing="0px" stroke-width=".265px" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:0px" xml:space="preserve"><tspan x="54" y="7.9999995" text-align="end" style="line-height:0px">Code will never be modified,</tspan><tspan x="54" y="10.199356" text-align="end" style="line-height:0px">even if it has bugs</tspan></text>
 	</g>
-	<g id="frag4" transform="translate(-89.8 -127)" fill="#fff">
-		<text x="150.6657" y="130.18037" fill="#ffffff" font-family="sans-serif" font-size="10.6px" letter-spacing="0px" stroke="#000000" stroke-width=".265px" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:0px" xml:space="preserve"><tspan x="150.6657" y="130.18037" fill="#ffffff" font-size="2.12px" stroke="none" stroke-width=".265px" text-align="end" text-anchor="end" style="line-height:0px">I have created a monster...</tspan></text>
+	<g id="frag4" transform="translate(-88.7 -128)" fill="#fff">
+		<text x="150.6657" y="130.18037" fill="#ffffff" font-family="'Open Sans'" font-size="10.6px" letter-spacing="0px" stroke="#000000" stroke-width=".265px" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:0px" xml:space="preserve"><tspan x="150.6657" y="130.18037" fill="#ffffff" font-family="'Open Sans'" font-size="2.12px" stroke="none" stroke-width=".265px" text-align="end" text-anchor="end" style="line-height:0px">You have created a monster...</tspan></text>
 	</g>
+	<path d="m4 2 1-1v34h59l-1 1" fill="none" stroke="#fefefe" stroke-width=".265px"/>
 </svg>
