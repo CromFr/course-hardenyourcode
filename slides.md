@@ -66,16 +66,6 @@ What if...
 Note: You need to be informed when & where it occurs, and handle it
 
 
-## Software is fragile
-<object id="dependencygraph" data="res/dependencygraph.svg" type="image/svg+xml" onload="dependencygraph_load()"><!-- .element: class="raw full-width" -->
-<span id="dependencygraph1" class="fragment"></span>
-<span id="dependencygraph2" class="fragment"></span>
-<span id="dependencygraph3" class="fragment"></span>
-<span id="dependencygraph4" class="fragment"></span>
-<span id="dependencygraph5" class="fragment"></span>
-<span id="dependencygraph6" class="fragment"></span>
-
-
 ## True story: LCDA
 
 - __~300K__ lines of code, tied to runtime server state
