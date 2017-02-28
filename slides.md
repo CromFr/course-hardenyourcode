@@ -17,14 +17,6 @@
 Note: I'll give key words
 
 
-## __Q__uality __A__ssurance
-
-TODO
-
-- Some people are paid to do only this
-- Worst job ever?
-
-
 ## Have you ever met...
 
 
@@ -49,6 +41,19 @@ Note: Documentation is never perfect, devs can't be always smart
 - Unexpected character in string
 
 
+## Software is fragile
+<object id="dependencygraph" data="res/dependencygraph.svg" type="image/svg+xml" onload="dependencygraph_load()"><!-- .element: class="raw full-height" -->
+<span id="dependencygraph1" class="fragment"></span>
+<span id="dependencygraph2" class="fragment"></span>
+<span id="dependencygraph3" class="fragment"></span>
+<span id="dependencygraph4" class="fragment"></span>
+<span id="dependencygraph5" class="fragment"></span>
+<span id="dependencygraph6" class="fragment"></span>
+<span id="dependencygraph7" class="fragment"></span>
+<span id="dependencygraph8" class="fragment"></span>
+<span id="dependencygraph9" class="fragment"></span>
+
+
 ## Uncertain edge cases
 
 What if...
@@ -61,13 +66,14 @@ What if...
 Note: You need to be informed when & where it occurs, and handle it
 
 
-## Time wasted
-<object id="linesofcodetimespent" data="res/linesofcodetimespent.svg" type="image/svg+xml" onload="linesofcodetimespent_load()"><!-- .element: class="raw full-height" -->
-<span id="linesofcodetimespent1" class="fragment"></span>
-<span id="linesofcodetimespent2" class="fragment"></span>
-<span id="linesofcodetimespent3" class="fragment"></span>
-<span id="linesofcodetimespent4" class="fragment"></span>
-<span id="linesofcodetimespent5" class="fragment"></span>
+## Software is fragile
+<object id="dependencygraph" data="res/dependencygraph.svg" type="image/svg+xml" onload="dependencygraph_load()"><!-- .element: class="raw full-width" -->
+<span id="dependencygraph1" class="fragment"></span>
+<span id="dependencygraph2" class="fragment"></span>
+<span id="dependencygraph3" class="fragment"></span>
+<span id="dependencygraph4" class="fragment"></span>
+<span id="dependencygraph5" class="fragment"></span>
+<span id="dependencygraph6" class="fragment"></span>
 
 
 ## True story: LCDA
@@ -92,6 +98,23 @@ Note: You need to be informed when & where it occurs, and handle it
 - __Regressions__ are god damn __frustrating__
 - We can't predict __how users will use__ our code
 - You __WILL__ break your code, and may not see it
+
+
+## Time wasted
+<object id="linesofcodetimespent" data="res/linesofcodetimespent.svg" type="image/svg+xml" onload="linesofcodetimespent_load()"><!-- .element: class="raw full-height" -->
+<span id="linesofcodetimespent1" class="fragment"></span>
+<span id="linesofcodetimespent2" class="fragment"></span>
+<span id="linesofcodetimespent3" class="fragment"></span>
+<span id="linesofcodetimespent4" class="fragment"></span>
+<span id="linesofcodetimespent5" class="fragment"></span>
+
+
+## __Q__uality __A__ssurance
+
+- Keep things easy
+
+- Some people are paid to do only this
+- Worst job ever?
 
 
 ## Development hurts...
