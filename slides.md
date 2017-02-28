@@ -111,9 +111,10 @@ _but we like it_
 
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#421c0d" -->
+
 
 # __Unit tests__
+<!-- .slide: data-background="#421c0d" -->
 
 
 ## May seems annoying
@@ -278,8 +279,9 @@ Note:
 
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#421c0d" -->
+
 # __Coverage__ analysis
+<!-- .slide: data-background="#421c0d" -->
 
 
 ## Why?
@@ -368,8 +370,9 @@ by calling functions without checks
 
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#421c0d" -->
+
 # __Contract__ programing
+<!-- .slide: data-background="#421c0d" -->
 
 
 ## Why?
@@ -450,8 +453,9 @@ class GpsCoord{
 
 
 ------------------------------------------------------------
-<!-- .slide: data-background="#421c0d" -->
+
 # __C__ontinuous __I__ntegration
+<!-- .slide: data-background="#421c0d" -->
 
 
 ## What if...
@@ -533,13 +537,19 @@ Coverage Analysis
 <span id="opensourceci6" class="fragment"></span>
 
 
+
+
+
+
+
+
 ------------------------------------------------------------
-<!-- .slide: data-background="#421c0d" -->
+
 
 # Bonus stage
 ![](res/extra.png)<!-- .element: class="raw almost-full-height" -->
 <footer>ExtraCredits</footer>
-
+<!-- .slide: data-background="#421c0d" -->
 
 ## Handling inter-dependencies
 
@@ -586,10 +596,10 @@ Notes: Rust's memory management
 
 
 
-
 ------------------------------------------------------------
-<!-- .slide: data-background="#421c0d" -->
 
 # (?)
 ![](res/questions.jpg)<!-- .element: class="almost-full-height" -->
 <footer>ExtraCredits</footer>
+
+<!-- .slide: data-background="#421c0d" -->
