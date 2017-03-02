@@ -564,6 +564,7 @@ Coverage Analysis
 <footer>ExtraCredits</footer>
 <!-- .slide: data-background="#421c0d" -->
 
+
 ## Handling inter-dependencies
 
 - Mock / Stub functions / class
@@ -603,6 +604,12 @@ Notes: Rust's memory management
 - ...
 
 
+## Profile-guided optimizations
+
+- Optimize code for __specific use cases__
+  + Statistical analysis
+  + Code instrumentation
+- Unit tests can __automate__ these use cases
 
 
 
