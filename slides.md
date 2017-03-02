@@ -130,8 +130,34 @@ _but we like it_
 <!-- .slide: data-background="#421c0d" -->
 
 
-## May seems annoying
+## Unit testing
+
+- __Execute__ things, __check__ results
+- __List__ of tests with their results
+
+
+#
+
+|                      Test                     |   Result  |
+| --------------------------------------------- | --------- |
+| Execute on PC with GPS connected              | ok        |
+| => Disconnect the GPS                         | __crash__ |
+| Execute on PC with GPS disconnected           | ok        |
+| => Connect the GPS                            | ok        |
+| => Disconnect the GPS                         | __crash__ |
+| Execute on Raspberry Pi with GPS connected    | ok        |
+| => Disconnect the GPS                         | ok        |
+| Execute on Raspberry Pi with GPS disconnected | __crash__ |
+| ...                                           |           |
+<!-- .element: style="font-size: 0.8em" -->
+
+
+## How do you like this?
 ![](res/test.gif)<!-- .element: class="full-height" -->
+
+Notes:
+- Waste of time, annoying as sh***
+- This works for things that never change (measurements)
 
 
 ## In fact
@@ -141,29 +167,50 @@ int main(){
     printf("===> %s\n", my_function(-1, 0));
 }
 ```
-- You're doing _manual_ unit tests very often
+- You're doing these kind of tests very often
 - This work shouldn't be wasted
 
 
-## The ugly <ico>😡</ico>
+## Assertions
+
+```c
+assert(1 != 0);
+```
+
+```txt
+helloworld: main.c:42: main: Assertion `1 != 0' failed
+[1]    27988 abort (core dumped)  ./helloworld
+```
+
+Notes:
+- Who encountered, used assertions?
+- assert is for checking development issues
+
+
+## HowTo test
+
+
+## The ugly way
 
 - Write test cases on paper/word/...
-- Start writing unit tests after writing code
+- Start writing tests after writing code
+- Remove tests once it works
 
 
-## The bad <ico>😢</ico>
+## The bad way
 
-- Think that unit tests will slow you down
-- Test some functions with typical values
+- Think that writing unit tests will slow you down
+- Write 1/2/3/... tests to check a function
 
 
-## The good <ico>😻</ico>
+## The good way
 
-0. Write some __unit tests before implementation__
+0. Write some unit tests __before implementation__
 0. Write unit tests __for each__ function/file
 0. During __implementation__, __reinforce__ your tests
 0. Unit tests must be __independents__
 
+Note: independent = no side effects, like singletons instantiation
 
 ## Before implementation
 ```c
@@ -205,7 +252,8 @@ unittest{ //Tests for GpsPoint
 <!-- .element: class="full-height" -->Just make sure __everything__ has its own unit tests.
 
 
-## During implementation: reinforce
+### During implementation
+## __reinforce__
 
 - You know how it's __implemented__
 - You know which cases are __tricky__
@@ -227,9 +275,8 @@ Note: don't avoid tricky tests or they will hit you in the face
 
 ## Keep in mind
 
-### Writing unit test __IS development__
-
-### It helps you write __better code, faster__
+- Writing unit test __IS development__
+- It helps you write __better code, faster__
 
 
 ## Unit tests as ... __documentation__
