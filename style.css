@@ -21,6 +21,9 @@ img.raw{
 	height: 500px;
 	width: auto;
 }
+.full-height > code{
+	max-width: none;
+}
 .almost-full-height{
 	height: 400px;
 	width: auto;
@@ -53,7 +56,10 @@ code{
 	font-size: 0.4em;
 }
 
-
+.slides section tbody tr{
+	border-width: 2px;
+	border-style: solid none solid none;
+}
 
 
 body > footer{
