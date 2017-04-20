@@ -21,19 +21,19 @@ Note: I'll give key words
 
 
 ### A bugfix introducing a new bug
-![](res/bugsagain.gif)<!-- .element: class="raw full-height" -->
+![](res/bugsagain.gif)<!-- .element: class="raw h400" -->
 
 
 ### Unexpected side effects
-![](res/unexpectedsideeffects.gif)<!-- .element: class="full-height" -->
+![](res/unexpectedsideeffects.gif)<!-- .element: class="h400" -->
 
 
 ### Regressions
-![](res/regression.gif)<!-- .element: class="full-height" -->
+![](res/regression.gif)<!-- .element: class="h400" -->
 
 
 ### Unexpected inputs
-![](res/unexpectedinput.gif)<!-- .element: class="full-height" -->
+![](res/unexpectedinput.gif)<!-- .element: class="h400" -->
 
 Note: Documentation is never perfect, devs can't be always smart
 - Null / Nil
@@ -42,7 +42,7 @@ Note: Documentation is never perfect, devs can't be always smart
 
 
 ## Software is fragile
-<object id="dependencygraph" data="res/dependencygraph.svg" type="image/svg+xml" onload="dependencygraph_load()"><!-- .element: class="raw full-height" -->
+<object id="dependencygraph" data="res/dependencygraph.svg" type="image/svg+xml" onload="dependencygraph_load()"><!-- .element: class="raw h500" -->
 <span id="dependencygraph1" class="fragment"></span>
 <span id="dependencygraph2" class="fragment"></span>
 <span id="dependencygraph3" class="fragment"></span>
@@ -91,7 +91,7 @@ Note: You need to be informed when & where it occurs, and handle it
 
 
 ## Time wasted
-<object id="linesofcodetimespent" data="res/linesofcodetimespent.svg" type="image/svg+xml" onload="linesofcodetimespent_load()"><!-- .element: class="raw full-height" -->
+<object id="linesofcodetimespent" data="res/linesofcodetimespent.svg" type="image/svg+xml" onload="linesofcodetimespent_load()"><!-- .element: class="raw h500" -->
 <span id="linesofcodetimespent1" class="fragment"></span>
 <span id="linesofcodetimespent2" class="fragment"></span>
 <span id="linesofcodetimespent3" class="fragment"></span>
@@ -108,13 +108,13 @@ Note: You need to be informed when & where it occurs, and handle it
 
 
 ## Development hurts...
-![](res/pain.gif)<!-- .element: class="almost-full-height" -->
+![](res/pain.gif)<!-- .element: class="h300" -->
 
 _but we like it_
 
 
 ## Time to move forward !
-![](res/totoro.gif)<!-- .element: class="full-height" style="transform: scaleX(-1);" -->
+![](res/totoro.gif)<!-- .element: class="h400" style="transform: scaleX(-1);" -->
 
 
 
@@ -153,7 +153,7 @@ _but we like it_
 
 
 ## How do you like this?
-![](res/test.gif)<!-- .element: class="full-height" -->
+![](res/test.gif)<!-- .element: class="h400" -->
 
 Notes:
 - Waste of time, annoying as sh***
@@ -177,7 +177,7 @@ int main(){
 assert(1 != 0);
 ```
 
-```txt
+```raw
 helloworld: main.c:42: main: Assertion `1 != 0' failed
 [1]    27988 abort (core dumped)  ./helloworld
 ```
@@ -212,6 +212,7 @@ Notes:
 
 Note: independent = no side effects, like singletons instantiation
 
+
 ## Before implementation
 ```c
 void car_t_unittests(){
@@ -240,7 +241,6 @@ class GpsPoint{
     p.setDMS("48°24'25.1886\",-4°29'44.4084\"");
     assert(p.lat == 48.406997 && p.lon == -4.4956687);
   }
-  ...
 }
 unittest{ //Tests for GpsPoint
     auto a = new GpsPoint(48.0, -4.4);
@@ -249,7 +249,7 @@ unittest{ //Tests for GpsPoint
     assert(p.lat == xxx && p.lon == xxx);
 }
 ```
-<!-- .element: class="full-height" -->Just make sure __everything__ has its own unit tests.
+Just make sure __everything__ has its own unit tests.
 
 
 ### During implementation
@@ -280,7 +280,7 @@ Note: don't avoid tricky tests or they will hit you in the face
 
 
 ## Unit tests as ... __documentation__
-![](res/doc.gif)<!-- .element: class="almost-full-height" -->
+![](res/doc.gif)<!-- .element: class="h400" -->
 
 Note: next is a tricky code example
 
@@ -322,7 +322,8 @@ void do_some_magic_unittests(){
 ## But... please...
 
 Don't be a freak, be efficient
-![](res/freak.gif)<!-- .element: class="almost-full-height" -->
+
+![](res/freak.gif)<!-- .element: class="h300" -->
 
 Note:
 - No need to write 10 lines for every function on earth
@@ -346,7 +347,7 @@ Note:
 
 ## Why?
 Are you sure you tested everything?
-![](res/alltested.gif)<!-- .element: class="almost-full-height" -->
+![](res/alltested.gif)<!-- .element: class="h400" -->
 
 
 ## What?
@@ -357,62 +358,62 @@ Are you sure you tested everything?
 
 ## Example: GCC
 ```c
-#include <stdio.h>
-void leet_enc(const char* s){
-    while(*s != '\0'){
-        switch(*s){
-            case 'O': printf("0"); break;
-            case 'E': printf("3"); break;
-            case 'T': printf("7"); break;
-            case 'I': printf("1"); break;
-            default: printf("%c", *s); break;
+char* leet_enc(char* s){
+    char* ret = malloc(strlen(s)); strcpy(ret, s);
+    char* iter = ret;
+    while(*iter++ != '\0'){
+        switch(*iter){
+            case 'O': *iter = '0'; break;
+            case 'E': *iter = '3'; break;
+            case 'T': *iter = '7'; break;
+            case 'I': *iter = '1'; break;
+            default: break;
         }
-        s++;
     }
+    return ret;
 }
 int main(){
-    leet_enc("HELLO WORLD\n");
-    leet_enc("");
+    assert(strcmp(leet_enc("HELLO WORLD\n"), "H3LL0 W0RLD\n") == 0);
+    assert(strcmp(leet_enc(""), "") == 0);
     return 0;
 }
 ```
-<!-- .element: class="full-height" -->
 
 
 ## Build for coverage
 ```sh
 gcc -ftest-coverage -fprofile-arcs test.c -o test
 ./test
-# H3LL0 W0RLD
 gcov test.c
 # File 'test.c'
-# Lines executed:85.71% of 14
+# Lines executed:86.67% of 15
 # Creating 'test.c.gcov'
 ```
 
 
 ## Output
 ```c
-    -:    1:#include <stdio.h>
-    2:    2:void leet_enc(const char* s){
-   16:    3:    while(*s != '\0'){
-   12:    4:        switch(*s){
-    2:    5:            case 'O': printf("0"); break;
-    1:    6:            case 'E': printf("3"); break;
-#####:    7:            case 'T': printf("7"); break;
-#####:    8:            case 'I': printf("1"); break;
-    9:    9:            default: printf("%c", *s); break;
-    -:   10:        }
-   12:   11:        s++;
-    -:   12:    }
-    2:   13:}
-    1:   14:int main(){
-    1:   15:    leet_enc("HELLO WORLD\n");
-    1:   16:    leet_enc("");
-    1:   17:    return 0;
-    -:   18:}
+        2:    5:char* leet_enc(char* s){
+        2:    6:    char* ret = malloc(strlen(s)); strcpy(ret, s);
+        2:    7:    char* iter = ret;
+       16:    8:    while(*iter++ != '\0'){
+       12:    9:        switch(*iter){
+        2:   10:            case 'O': *iter = '0'; break;
+        1:   11:            case 'E': *iter = '3'; break;
+    #####:   12:            case 'T': *iter = '7'; break;
+    #####:   13:            case 'I': *iter = '1'; break;
+        9:   14:            default: break;
+        -:   15:        }
+        -:   16:    }
+        2:   17:    return ret;
+        -:   18:}
+        1:   19:int main(){
+        1:   20:    assert(strcmp(leet_enc("HELLO WORLD\n"), "H3LL0 W0RLD\n") == 0);
+        1:   21:    assert(strcmp(leet_enc(""), "") == 0);
+        1:   22:    return 0;
+        -:   23:}
 ```
-<!-- .element: class="full-height" -->Conclusion: <span class="fragment">Test strings with `T` and `I`</span>
+<!-- .element: class="h500" --><span class="fragment">TODO: Test strings with `T` and `I`</span>
 
 
 Note: `| Exec count | Line No | Code |`
@@ -423,7 +424,7 @@ Note: `| Exec count | Line No | Code |`
 Don't fake your ratio<br/>
 by calling functions without checks
 
-![](res/enlarge.gif)<!-- .element: class="almost-full-height" -->
+![](res/enlarge.gif)<!-- .element: class="h300" -->
 
 
 
@@ -529,12 +530,12 @@ class GpsCoord{
 
 ...and I'm lazy
 
-![](res/lazy.gif)
+![](res/lazy.gif)<!-- .element: class="raw h300" -->
 
 
 ## Here comes automation!
 
-![](res/hoveringdog.gif)<!-- .element: class="almost-full-height" -->
+![](res/hoveringdog.gif)<!-- .element: class="h400" -->
 
 
 ## TravisCI (GitHub)
@@ -584,11 +585,11 @@ Coverage Analysis
 
 ## dlang/phobos
 
-![](res/ciexample.png)<!-- .element: class="full-width" -->
+![](res/ciexample.png)<!-- .element: class="h500" -->
 
 
 ## Process
-<object id="opensourceci" data="res/opensourceci.svg" type="image/svg+xml" onload="opensourceci_load()"><!-- .element: class="raw full-width" -->
+<object id="opensourceci" data="res/opensourceci.svg" type="image/svg+xml" onload="opensourceci_load()"><!-- .element: class="raw h500" -->
 <span id="opensourceci1" class="fragment"></span>
 <span id="opensourceci2" class="fragment"></span>
 <span id="opensourceci3" class="fragment"></span>
@@ -607,7 +608,7 @@ Coverage Analysis
 
 
 # Bonus stage
-![](res/extra.png)<!-- .element: class="raw almost-full-height" -->
+![](res/extra.png)<!-- .element: class="raw h400" -->
 <footer>ExtraCredits</footer>
 <!-- .slide: data-background="#421c0d" -->
 
@@ -639,13 +640,24 @@ Notes:
 - Rust's ownership tested at CT
 
 
-
 ## Static / dynamic analysis
 - Static
   * __cppcheck__
   * FindBugs (Java)
 - Dynamic 
   * __valgrind__
+
+Note: static analysis similar to compiler warnings
+
+
+## Fuzzing the beast
+- Test your code with randomized inputs
+- Wait for your program to:
+  + Crash
+  + Do weird things
+  + ...
+
+Note: Used in security area
 
 
 #### `less_code && less_duplications`
@@ -677,7 +689,7 @@ Notes:
 ------------------------------------------------------------
 
 # (?)
-![](res/questions.jpg)<!-- .element: class="almost-full-height" -->
+![](res/questions.jpg)<!-- .element: class="h400" -->
 <footer>ExtraCredits</footer>
 
 <!-- .slide: data-background="#421c0d" -->
