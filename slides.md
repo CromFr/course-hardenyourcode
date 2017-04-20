@@ -634,12 +634,23 @@ Coverage Analysis
 
 ...or a powerful linter
 
-Notes: Rust's memory management
+Notes: 
+- Keep warnings
+- Rust's ownership tested at CT
 
 
-### `less_code && less_duplications`
-### `==`
-### `better_code`
+
+## Static / dynamic analysis
+- Static
+  * __cppcheck__
+  * FindBugs (Java)
+- Dynamic 
+  * __valgrind__
+
+
+#### `less_code && less_duplications`
+#### `==`
+#### `better_code`
 
 
 ## Peer working<br/>=> Code formatting
