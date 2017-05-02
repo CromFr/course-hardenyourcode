@@ -90,6 +90,10 @@ Note: You need to be informed when & where it occurs, and handle it
 - You __WILL__ break your code, and may not see it
 
 
+## Fear-based programming
+Don't touch it, it's fragile !
+
+
 ## Time wasted
 <object id="linesofcodetimespent" data="res/linesofcodetimespent.svg" type="image/svg+xml" onload="linesofcodetimespent_load()"><!-- .element: class="raw h500" -->
 <span id="linesofcodetimespent1" class="fragment"></span>
