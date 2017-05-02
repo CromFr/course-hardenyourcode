@@ -4,6 +4,39 @@
 ## your `<code/>`
 
 
+------------------------------------------------------------
+
+
+## about::me
+
+<table>
+    <tr>
+        <td style="vertical-align: top; size: 0.9rem">
+            <p>Thibaut CHARLES</p>
+            <ul>
+                <li>https://thibautcharles.net</li>
+                <li>@CromFr on <a href="https://twitter.com/@CromFr">Twitter</a> &amp; <a href="https://github.com/CromFr/">Github</a></li>
+                <li>CromFr@gmail.com</li>
+            </ul>
+        </td>
+        <td>
+            ![](res/me.jpg)<!-- .element: class="h400" -->
+        </td>
+    </tr>
+</table>
+
+
+## Yay ! <!-- .element: style="font-family: comic sans ms;" -->
+![](res/diploma.jpg)
+
+
+## Why this?
+<!-- TODO? -->
+
+
+------------------------------------------------------------
+
+
 ## Disclaimer
 
 - __High level__ concepts
