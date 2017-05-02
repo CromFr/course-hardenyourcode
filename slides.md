@@ -11,11 +11,11 @@
 
 <table>
     <tr>
-        <td style="vertical-align: top; size: 0.9rem">
+        <td style="vertical-align: top;">
             <p>Thibaut CHARLES</p>
             <ul>
                 <li>https://thibautcharles.net</li>
-                <li>@CromFr on <a href="https://twitter.com/@CromFr">Twitter</a> &amp; <a href="https://github.com/CromFr/">Github</a></li>
+                <li>@CromFr <a href="https://twitter.com/@CromFr">Twitter</a>/<a href="https://github.com/CromFr/">Github</a></li>
                 <li>CromFr@gmail.com</li>
             </ul>
         </td>
@@ -30,8 +30,12 @@
 ![](res/diploma.jpg)
 
 
-## Why this?
-<!-- TODO? -->
+## about::this
+
+Notes:
+- Used everywhere (enterprise & open source)
+- Useful for you
+- Not taught at school
 
 
 ------------------------------------------------------------
