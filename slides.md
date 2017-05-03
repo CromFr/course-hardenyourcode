@@ -17,6 +17,7 @@
                 <li>https://thibautcharles.net</li>
                 <li>@CromFr <a href="https://twitter.com/@CromFr">Twitter</a>/<a href="https://github.com/CromFr/">Github</a></li>
                 <li>CromFr@gmail.com</li>
+                <li>ClubElec before it was cool (2011)</li>
             </ul>
         </td>
         <td>
@@ -48,7 +49,6 @@ Notes:
   + __Any language__
   + __Any target__ (native app, web, embedded...)
 - Useful for __small__ to __big__ projects
-
 - Always __good__ <ico>😉</ico>
 
 Note: I'll give key words
@@ -212,6 +212,9 @@ int main(){
 - This work shouldn't be wasted
 
 
+## HowTo test
+
+
 ## Assertions
 
 ```c
@@ -228,13 +231,10 @@ Notes:
 - assert is for checking development issues
 
 
-## HowTo test
-
-
 ## The ugly way
 
 - Write test cases on paper/word/...
-- Start writing tests after writing code
+- Start writing tests after writing your program
 - Remove tests once it works
 
 
@@ -252,6 +252,10 @@ Notes:
 0. Unit tests must be __independents__
 
 Note: independent = no side effects, like singletons instantiation
+
+
+## TDD
+Test-Driven Development
 
 
 ## Before implementation
@@ -386,15 +390,15 @@ Note:
 <!-- .slide: data-background="#421c0d" -->
 
 
-## Why?
-Are you sure you tested everything?
-![](res/alltested.gif)<!-- .element: class="h400" -->
-
-
 ## What?
 - A __way to build/execute__ the program
 - Provided by __language tooling__
 - __Count__ each line __execution__
+
+
+## Why?
+Are you sure you tested everything?
+![](res/alltested.gif)<!-- .element: class="h400" -->
 
 
 ## Example: GCC
@@ -528,7 +532,7 @@ body{
 - __Do not change__ the function __behaviour__
 
 
-## Invariant (Typestate?)
+## Invariant
 
 Native in D, Eiffel, soon in C++17
 
@@ -577,6 +581,16 @@ class GpsCoord{
 ## Here comes automation!
 
 ![](res/hoveringdog.gif)<!-- .element: class="h400" -->
+
+
+## Do
+- __Execute__ unit tests
+- __Analyze__ coverage
+- __Generate__ documentation
+- Do some __magic__
+- ...
+
+For __each__ modification
 
 
 ## TravisCI (GitHub)
