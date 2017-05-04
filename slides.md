@@ -683,7 +683,7 @@ Coverage Analysis
 - __Assertions__
   + A __debugging__ tool
   + If it happens, it's the __developer's fault__
-  + ex: Division by 0, Pointer exceptions
+  + ex: Division by 0, Pointer errors
 
 
 ## The compiler is your best friend
