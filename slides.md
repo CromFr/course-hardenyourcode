@@ -322,6 +322,7 @@ Note: don't avoid tricky tests or they will hit you in the face
 
 - Writing unit test __IS development__
 - It helps you write __better code, faster__
+- You can deactivate tests with compile flags
 
 
 ## Unit tests as ... __documentation__
